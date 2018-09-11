@@ -88,7 +88,3 @@ default json return should be like
 ##Contact me
 
  if you have a better idea on this project or way, please let me know, thanks:)
-
-[Email](mailto:81813780@qq.com)
-
-[Weibo](http://weibo.com/601265161)

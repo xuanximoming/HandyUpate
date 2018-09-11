@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 version = "1.0"
@@ -10,7 +9,7 @@ android {
     resourcePrefix "HandyUpdate__"
 
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
         versionName version
@@ -28,43 +27,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.0.0'
     compile 'com.koushikdutta.ion:ion:2.+'
 }
-
-def siteUrl = 'https://github.com/81813780/HandyUpate-Android'
-def gitUrl = 'https://github.com/81813780/HandyUpate-Android.git'
-group = "wang.jack.update.library"
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                // Add your description here
-                name 'A simple version update for Android'
-                url siteUrl
-                // Set your license
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id '81813780'
-                        name 'jack'
-                        email '81813780@qq.com'
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
-}
-
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
@@ -91,8 +53,6 @@ bintray {
     pkg {
         repo = "maven"
         name = "HandyUpdate"
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
     }

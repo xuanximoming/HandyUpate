@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "wang.jack.update"
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion 22
         versionCode 9
         versionName "1.0"
